@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Oxinhem</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CoContent/css/animate.css">
+    <link rel="stylesheet" href="/CoContent/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/CoContent/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/CoContent/css/magnific-popup.css">
+    <link rel="stylesheet" href="/CoContent/css/flaticon.css">
+    <link rel="stylesheet" href="/CoContent/css/style.css">
+    <script type="text/javascript" src="~/CoContent/js/jquery-3.2.1.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3rIbAr5Q6b4iSkURqixP4DcxWo4QtZQM&callback=initMap"></script> <!-- Google Map API -->
+</head>
+<body>
+    @{ 
+        var db = new oxinhem.Models.MyAppdbContext();
+        var Co = new MyModels.Company();
+        Co = db.companies.FirstOrDefault();
+        var routeValues = this.ViewContext.RouteData.Values;
+        var controller = routeValues["controller"] as string;
+        var action = routeValues["action"] as string;
+    }
+    <div class="wrap">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md d-flex align-items-center">
+                    <p class="mb-0 phone">
+                        <span class="mailus">@Resources.lang.Home_Phone</span>
+                        <a href="tel:@Co.Tel1">@Co.Tel1</a>
+                        <span class="mailus">@Resources.lang.Home_Email</span>
+                        <a href="mailto:@Co.Email">@Co.Email</a>
+                        @Html.ActionLink("_", @action, @controller, new { culture = "en" }, new { rel = "alternate", hreflang = "en", @class = "flag-icon flag-icon-us" })
+                        @Html.ActionLink("_", @action, @controller, new { culture = "se" }, new { rel = "alternate", hreflang = "se", @class = "flag-icon flag-icon-se" })
+                    </p>    
+                </div>
+                <div class="col-12 col-md d-flex justify-content-md-end">
+                    <div class="social-media">
+                        <p class="mb-0 d-flex">
+                            <a href="@Co.Facebook" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                            <a href="@Co.Instagram" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="~/CoContent/images/oxin logo1.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        @*<a href="/Home/index" class="nav-link">Home</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_Home, "Index", "Home", new { id = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @*<a href="/Home/Cleaning" class="nav-link">Cleaning</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_Cleaning, "Cleaning", "Home", new { id = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @*<a href="/Home/Painting" class="nav-link">Painting</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_Painting, "Painting", "Home", new { id = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @*<a href="/Home/Pricing" class="nav-link">Pricing</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_Pricing, "Pricing", "Home", new { id = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @*<a href="/Home/about" class="nav-link">About</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_About, "about", "Home",new { id = "" },new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @*<a href="/Home/contact" class="nav-link">Contact</a>*@
+                        @Html.ActionLink(Resources.lang.Menu_Contact, "contact", "Home", new { id = "" }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    @RenderBody()
+   
+    <div>
+        <lable style="color:white;font-size:0px;">växjö cleaning</lable>
+        <lable style="color:white;font-size:0px;">window cleaning</lable>
+        <lable style="color:white;font-size:0px;">house cleaning</lable>
+        <lable style="color:white;font-size:0px;">cleaning services</lable>
+        <lable style="color:white;font-size:0px;">commercial cleaning service</lable>
+        <lable style="color:white;font-size:0px;">green clean</lable>
+        <lable style="color:white;font-size:0px;">office cleaning</lable>
+        <lable style="color:white;font-size:0px;">commercial cleaning</lable>
+        <lable style="color:white;font-size:0px;">spring cleaning</lable>
+        <lable style="color:white;font-size:0px;">cleaning company</lable>
+        <lable style="color:white;font-size:0px;">carpet cleaning sweden</lable>
+        <lable style="color:white;font-size:0px;">move out cleaning</lable>
+        <lable style="color:white;font-size:0px;">cleaning staff</lable>
+        <lable style="color:white;font-size:0px;">hospital cleaning</lable>
+        <lable style="color:white;font-size:0px;">move-in cleaning</lable>
+        <lable style="color:white;font-size:0px;">professional cleaners</lable>
+        <lable style="color:white;font-size:0px;">apartment cleaning</lable>
+        <lable style="color:white;font-size:0px;">post-construction cleaning</lable>
+        <lable style="color:white;font-size:0px;">residential cleaning</lable>
+        <lable style="color:white;font-size:0px;">warehouse cleaning</lable>
+        <lable style="color:white;font-size:0px;">weekly cleaning</lable>
+        <lable style="color:white;font-size:0px;">rental cleaning</lable>
+        <lable style="color:white;font-size:0px;">monthly cleaning</lable>
+        <lable style="color:white;font-size:0px;">Städning</lable>
+        <lable style="color:white;font-size:0px;">fönsterputs</lable>
+        <lable style="color:white;font-size:0px;">hem städning</lable>
+        <lable style="color:white;font-size:0px;">städ tjänster</lable>
+        <lable style="color:white;font-size:0px;">kontor städning</lable>
+        <lable style="color:white;font-size:0px;">företag städning</lable>
+        <lable style="color:white;font-size:0px;">städning företag</lable>
+        <lable style="color:white;font-size:0px;">dammsugning</lable>
+        <lable style="color:white;font-size:0px;">moppning</lable>
+        <lable style="color:white;font-size:0px;">städning personal</lable>
+        <lable style="color:white;font-size:0px;">flyttstädning</lable>
+        <lable style="color:white;font-size:0px;">Garage städning</lable>
+
+    </div>
+
+    <footer class="footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">@Resources.lang.Shared_OxinCompany</h2>
+                    <p>@Resources.lang.Shared_OxinhemAbout</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                        <li class="ftco-animate"><a href="@Co.Facebook"><span class="fa fa-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="@Co.Instagram"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+                @*<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">Latest News</h2>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="img mr-4 rounded" style="background-image: url(/CoContent/images/image_1.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> Mar. 04, 2020</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="img mr-4 rounded" style="background-image: url(/CoContent/images/image_2.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> Mar. 04, 2020</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+                    <h2 class="footer-heading">@Resources.lang.Shared_Quick_Links</h2>
+                    <ul class="list-unstyled">
+                        <li>@Html.ActionLink(Resources.lang.Menu_Home, "Index", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink(Resources.lang.Menu_Cleaning, "Cleaning", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink(Resources.lang.Menu_Painting, "Painting", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink(Resources.lang.Menu_Pricing, "Pricing", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink(Resources.lang.Menu_About, "about", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink(Resources.lang.Menu_Contact, "contact", "Home", new { id = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">@Resources.lang.Shared_Have_Questions</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon fa fa-map-marker"></span><span class="text">@Co.Address</span></li>
+                            <li></li>
+                            <li><a href="tel:@Co.Tel1"><span class="icon fa fa-phone"></span><span class="text">@Co.Tel1</span></a></li>
+                            <li><a href="mailto:@Co.Email"><span class="icon fa fa-envelope-open"></span><span class="text">@Co.Email</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+    Copyright ©️ 2020 OXIN is registered in Sweden. Website Designed by R. S. Safa.
+                        -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> OXIN is registered in Sweden. Website Designed by: <a href="https://www.linkedin.com/in/reza-soleymani-safa-582a7a130/">R. S. Safa</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+    <script src="/CoContent/js/jquery.min.js"></script>
+    <script src="/CoContent/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/CoContent/js/popper.min.js"></script>
+    <script src="/CoContent/js/bootstrap.min.js"></script>
+    <script src="/CoContent/js/jquery.easing.1.3.js"></script>
+    <script src="/CoContent/js/jquery.waypoints.min.js"></script>
+    <script src="/CoContent/js/jquery.stellar.min.js"></script>
+    <script src="/CoContent/js/jquery.animateNumber.min.js"></script>
+    <script src="/CoContent/js/owl.carousel.min.js"></script>
+    <script src="/CoContent/js/jquery.magnific-popup.min.js"></script>
+    <script src="/CoContent/js/scrollax.min.js"></script>
+    <script src="/CoContent/js/google-map.js"></script>
+    <script src="/CoContent/js/main.js"></script>
+</body>
+</html>

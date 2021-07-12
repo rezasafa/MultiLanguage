@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Home_All_Official_Holidays" xml:space="preserve">
+    <value>Alla helgdagar</value>
+  </data>
+  <data name="Home_All_Sunday_Days" xml:space="preserve">
+    <value>Alla Söndagar</value>
+  </data>
+  <data name="Home_Business_Hours" xml:space="preserve">
+    <value>Kontorstid</value>
+  </data>
+  <data name="Home_DescrOxinhem" xml:space="preserve">
+    <value>Oxin är ett familjeföretag baserat i Växjö med avsikt att skapa jobbmöjligheter. Vårt mål är att anställa och hjälpa människor med diverse bakgrund och kunskap. Med erfaren personal tillhandahåller vi städtjänster för hushåll, företag, byggarbetsplatser, och generell flytt och storstädning. Även för kundernas tillhandahåller vi interior målnings tjänster. Vi arbetar i följande kommuner: Växjö, Alvesta, Uppvidinge, Tingsryd, Lessebo, Ljungby och Älmhult.Som städföretag är kundtjänst och kundnöjdhet vårt uppdrag och första prioritering. Om du söker en erfaren och pålitlig städstjänst är du på rätt plats.</value>
+  </data>
+  <data name="Home_DescrTeam" xml:space="preserve">
+    <value>inom familjen Oxin är personal det viktigaste i vår verksamhet som familj.</value>
+  </data>
+  <data name="Home_Email" xml:space="preserve">
+    <value>eller maila oss:</value>
+  </data>
+  <data name="Home_For_Emergency_Cases" xml:space="preserve">
+    <value>FÖR NÖDFALL</value>
+  </data>
+  <data name="Home_Monday_Friday" xml:space="preserve">
+    <value>Måndag - Fredag</value>
+  </data>
+  <data name="Home_Opening_Days" xml:space="preserve">
+    <value>Öppningsdagar:</value>
+  </data>
+  <data name="Home_OurTeam" xml:space="preserve">
+    <value>Vårt lag</value>
+  </data>
+  <data name="Home_Phone" xml:space="preserve">
+    <value>Telefonnummer:</value>
+  </data>
+  <data name="Home_Request_Address" xml:space="preserve">
+    <value>Adress</value>
+  </data>
+  <data name="Home_Request_Address_Hint" xml:space="preserve">
+    <value>Din adress</value>
+  </data>
+  <data name="Home_Request_Area" xml:space="preserve">
+    <value>OMRÅDE</value>
+  </data>
+  <data name="Home_Request_Balcony" xml:space="preserve">
+    <value>BALKONG</value>
+  </data>
+  <data name="Home_Request_Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="Home_Request_Email_Hint" xml:space="preserve">
+    <value>E-postadress</value>
+  </data>
+  <data name="Home_Request_Garage" xml:space="preserve">
+    <value>GARAGE</value>
+  </data>
+  <data name="Home_Request_Make_an_Appointment" xml:space="preserve">
+    <value>BOKA TID</value>
+  </data>
+  <data name="Home_Request_Message" xml:space="preserve">
+    <value>MEDDELANDE</value>
+  </data>
+  <data name="Home_Request_Message_Hint" xml:space="preserve">
+    <value>Ditt meddelande</value>
+  </data>
+  <data name="Home_Request_Name" xml:space="preserve">
+    <value>Namn</value>
+  </data>
+  <data name="Home_Request_Name_Hint" xml:space="preserve">
+    <value>Ditt namn</value>
+  </data>
+  <data name="Home_Request_Phone_number" xml:space="preserve">
+    <value>Telefonnummer</value>
+  </data>
+  <data name="Home_Request_Service_Select" xml:space="preserve">
+    <value>VÄLJ TJÄNSTER</value>
+  </data>
+  <data name="Home_Request_SquareMeters" xml:space="preserve">
+    <value>KVADRATMETER</value>
+  </data>
+  <data name="Home_Request_Storage" xml:space="preserve">
+    <value>LAGRING</value>
+  </data>
+  <data name="Home_Saturday" xml:space="preserve">
+    <value>Lördag</value>
+  </data>
+  <data name="Home_TeamStaff" xml:space="preserve">
+    <value>LAG &amp; PERSONAL</value>
+  </data>
+  <data name="Home_TextPic1" xml:space="preserve">
+    <value>Vill du ha dina platser rena?</value>
+  </data>
+  <data name="Home_TextPic2" xml:space="preserve">
+    <value>Vill du förnya interiörfärger?</value>
+  </data>
+  <data name="Home_TextPic3" xml:space="preserve">
+    <value>Så tveka inte att boka tid!</value>
+  </data>
+  <data name="Home_Vacations" xml:space="preserve">
+    <value>Semester</value>
+  </data>
+  <data name="Home_Welcome_to_Oxinhem" xml:space="preserve">
+    <value>VÄLKOMMEN TILL OXINHEM.SE</value>
+  </data>
+  <data name="Home_WHO_WE_ARE" xml:space="preserve">
+    <value>VEM VI ÄR ...</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>Om oss</value>
+  </data>
+  <data name="Menu_Cleaning" xml:space="preserve">
+    <value>Städning</value>
+  </data>
+  <data name="Menu_Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="Menu_Home" xml:space="preserve">
+    <value>Hem</value>
+  </data>
+  <data name="Menu_Painting" xml:space="preserve">
+    <value>Målning</value>
+  </data>
+  <data name="Menu_Pricing" xml:space="preserve">
+    <value>Prislista</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Skicka meddelande</value>
+  </data>
+  <data name="Shared_Have_Questions" xml:space="preserve">
+    <value>Har du frågor?</value>
+  </data>
+  <data name="Shared_OxinCompany" xml:space="preserve">
+    <value>Oxin Company</value>
+  </data>
+  <data name="Shared_OxinhemAbout" xml:space="preserve">
+    <value>För att se våra senaste erbjudanden, följ oss på instagram och facebook</value>
+  </data>
+  <data name="Shared_Quick_Links" xml:space="preserve">
+    <value>snabblänkar</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Ämne</value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Hemsida</value>
+  </data>
+</root>

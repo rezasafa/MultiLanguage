@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    var db = new oxinhem.Models.MyAppdbContext();
+    var Co = new MyModels.Company();
+    Co = db.companies.FirstOrDefault();
+}
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/CoContent/images/contact us.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+            <div class="col-md-9 ftco-animate pb-5">
+                <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/Home">@Resources.lang.Menu_Home <i class="fa fa-chevron-right"></i></a></span> <span>@Resources.lang.Menu_Contact <i class="fa fa-chevron-right"></i></span></p>
+                <h1 class="mb-0 bread">@Resources.lang.Menu_Contact</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row mb-5">
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-map-marker"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>@Resources.lang.Home_Request_Address:</span>@Co.Address</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-phone"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>@Resources.lang.Home_Phone</span> <a href="tel://@Co.Tel1">@Co.Tel1</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-envelope-open"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>@Resources.lang.Home_Request_Email:</span> <a href="mailto:@Co.Email">@Co.Email</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-globe"></span>
+                                </div>
+                                <div class="text">
+                                    <p><span>@Resources.lang.WebSite</span> <a href="/">Oxinhem.se</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-7">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3 class="mb-4">@Resources.lang.Menu_Contact</h3>
+                                <div id="form-message-warning" class="mb-4"></div>
+                                <form method="POST" action="/Home/Contact" enctype="multipart/form-data" id="contactForm" name="contactForm" class="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="name">@Resources.lang.Home_Request_Name</label>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="@Resources.lang.Home_Request_Name_Hint" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="email">@Resources.lang.Home_Request_Email</label>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="@Resources.lang.Home_Request_Email_Hint" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="subject">@Resources.lang.Subject</label>
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="#">@Resources.lang.Home_Request_Message</label>
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="@Resources.lang.Home_Request_Message_Hint"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="@Resources.lang.SendMessage" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-5 img" style="background-image: url(/CoContent/images/about.jpg);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                @*<div class="map" id="map_1"></div>*@
+                
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var msg = '@ViewBag.Message';
+    $(function () {
+        if (msg != '') {
+            alert(msg);
+        }
+    });
+    /*
+    function initMap() {
+        //35.7566224,51.398883 , 
+        var uluru = { lat: 56.850880, lng: 14.823638 };
+        var map = new google.maps.Map(document.getElementById('map_1'), {
+            zoom: 17,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+
+        var contentString = '<p><strong>Oxinhem</strong><br>OXINHEM</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+    }
+    */
+</script>
